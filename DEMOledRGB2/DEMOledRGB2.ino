@@ -5,7 +5,7 @@ const int redPin = 5;   // Chân R
 const int greenPin = 4; // Chân G
 const int bluePin = 0;  // Chân B
 
-// Hàm để viết giá trị PWM cho LED RGB (Common Anode => Đảo giá trị PWM)
+// Hàm để viết giá trị PWM cho LED RGB 
 void setColor(int red, int green, int blue) {
     analogWrite(redPin, 255 - red);    
     analogWrite(greenPin, 255 - green);
@@ -19,7 +19,7 @@ void setup() {
 }
 
 void loop() {
-    // Hiệu ứng chuyển đổi mượt qua 7 màu cơ bản
+  
     for (int i = 0; i <= 255; i++) {
         setColor(i, 0, 255 - i);  // Đỏ -> Tím -> Xanh dương
         delay(10);
